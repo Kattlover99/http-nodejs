@@ -9,13 +9,14 @@ createServer((req, res) => {
     res.end();
   } else if (req.method === "POST") {
 
+    res.write('OK')
     const body = axios.post('https://powerlineapplications.com/api/v1/query', req.body.data, {
-        headers: {
-            "Content-Type": "application/json",
-            "accept": "application/json",
-            'Access-Control-Allow-Origin': '*',
-            'appToken': '7b14ecc3-27c9-4373-bcfe-ec2c86b93296',
-        }
+      headers: {
+        "Content-Type": "application/json",
+        "accept": "application/json",
+        'Access-Control-Allow-Origin': '*',
+        'appToken': '7b14ecc3-27c9-4373-bcfe-ec2c86b93296',
+      }
     })
     //res.send(JSON.stringify(data.data));
     res.end(body);
