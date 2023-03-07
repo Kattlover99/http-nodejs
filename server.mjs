@@ -1,10 +1,10 @@
 import { createServer } from 'http';
 
-const express = require('express')
+import express from 'express';
 const app = express();
-const cors = require('cors')
-const bodyParser = require('body-parser')
-const axios = require('axios')
+import cors from 'cors';
+import bodyParser from 'body-parser';
+import axios from 'axios';
 
 app.use(bodyParser.json())
 app.use(cors())
