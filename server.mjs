@@ -9,6 +9,10 @@ import axios from 'axios';
 app.use(bodyParser.json())
 app.use(cors())
 
+app.get('/', async (req, res) => {
+    res.write('Hello World!');
+  })
+
 app.post('/', async (req, res) => {
   res.write('Hello World!');
     if (req.body.method === 'POST') {
